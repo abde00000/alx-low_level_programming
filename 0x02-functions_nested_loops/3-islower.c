@@ -9,7 +9,6 @@ nclude"main.h"
  * Return: returns 1 if `c` is lower
  *         or always 0 (Success)
 */
-
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
