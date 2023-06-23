@@ -1,10 +1,12 @@
 #include"main.h"
-
 /**
- * print_alphabet_x10 - function that will print the alphabet 10 times
+ * mul - multiplies two numbers
+ * @a: first number
+ * @b: second number
  *
-*/
+ * Return: the product of a and b
+ */
 int mul(int a, int b)
 {
-return (a * b);
+	return (a * b);
 }
