@@ -2,7 +2,7 @@
 
 /**
  * _isupper - uppercase Alphab
- * c : check char
+ * @c : check char
  *
  * Return: 0 || 1
  */
