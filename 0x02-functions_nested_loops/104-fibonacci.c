@@ -1,26 +1,34 @@
 #include"main.h"
 
 /**
- * numLength - returns the length of string
- *
- * @num: operand number
- *
- * Return: number of digits
+ * printFibonacci - prints Fibonacci numbers start
+ *				from 1 and 2
+ * main: prints function
+ * @n: finobacci sequence number
+ * return: always 0
 */
 
-int numLength(int num)
+void printFibonacci(int n)
 {
-	int length = 0;
+	unsigned int a = 1;
+	unsigned int b = 2;
 
-	if (!num)
-		return (1);
+	printf("%u ,%u ", a, b);
+	int i;
 
-	while (num)
+	for (i = 3; i <= n; i++)
 	{
-		num = num / 10;
-		length += 1;
+		unsigned int sum;
+
+		sum = a + b;
+		printf(" ,%u", sum);
+		a = b;
+		b = sum;
 	}
-
-	return (length);
+	printf("\n");
 }
-
+int main(void)
+{
+	printFibonacci(98);
+	return (0);
+}
