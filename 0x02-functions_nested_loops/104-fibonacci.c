@@ -13,10 +13,9 @@ void printFibonacci(int n)
 {
 	unsigned int a = 1;
 	unsigned int b = 2;
+	int i;
 
 	printf("%u ,%u ", a, b);
-	unsigned int i;
-
 	for (i = 3; i <= n; i++)
 	{
 		unsigned int sum;
