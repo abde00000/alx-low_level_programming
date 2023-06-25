@@ -11,17 +11,17 @@
 
 void printFibonacci(int n)
 {
-	unsigned int a = 1;
-	unsigned int b = 2;
+	unsigned long int a = 1;
+	unsigned long int b = 2;
 	int i;
 
 	printf("%u, %u", a, b);
 	for (i = 3; i <= n; i++)
 	{
-		unsigned int sum;
+		unsigned long int sum;
 
 		sum = a + b;
-		printf(", %u", sum);
+		printf(", %lu", sum);
 		a = b;
 		b = sum;
 	}
