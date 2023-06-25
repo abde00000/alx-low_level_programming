@@ -4,8 +4,8 @@
 /**
  * printFibonacci - prints Fibonacci numbers start
  *				from 1 and 2
- * main: prints function
  * @n: finobacci sequence number
+ * main - prints function
  * return: always 0
 */
 
