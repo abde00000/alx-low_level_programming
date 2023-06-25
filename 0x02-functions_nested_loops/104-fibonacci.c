@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include"main.h"
 
 /**
@@ -14,7 +15,7 @@ void printFibonacci(int n)
 	unsigned int b = 2;
 
 	printf("%u ,%u ", a, b);
-	int i;
+	unsigned int i;
 
 	for (i = 3; i <= n; i++)
 	{
