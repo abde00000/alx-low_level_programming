@@ -15,7 +15,7 @@ void printFibonacci(int n)
 	unsigned int b = 2;
 	int i;
 
-	printf("%u, %u ", a, b);
+	printf("%u, %u", a, b);
 	for (i = 3; i <= n; i++)
 	{
 		unsigned int sum;
