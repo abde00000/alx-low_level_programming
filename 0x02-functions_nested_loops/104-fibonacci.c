@@ -2,12 +2,10 @@
 #include"main.h"
 
 /**
- * printFibonacci - prints Fibonacci numbers start
- *				from 1 and 2
- * @n: finobacci sequence number
- * main - prints function
- * return: always 0
-*/
+ * printFibonacci - Prints the first n Fibonacci numbers
+ *                   starting with 1 and 2, separated by commas and spaces.
+ * @n: The number of Fibonacci numbers to print
+ */
 
 void printFibonacci(int n)
 {
@@ -27,6 +25,11 @@ void printFibonacci(int n)
 	}
 	printf("\n");
 }
+/**
+ * main - Entry point of the program
+ * Return: 0 on success
+ */
+
 int main(void)
 {
 	printFibonacci(98);
