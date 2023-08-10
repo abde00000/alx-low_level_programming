@@ -23,12 +23,12 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	unsigned int j;
+	int j;
 
 	for (j = 0; j < size; j++)
 	{
 		ptr[j] = c;
 	}
-	ptr[i] = '\0';
+	ptr[j] = '\0';
 	return (ptr);
 }
