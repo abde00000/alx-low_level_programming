@@ -11,6 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *ptr;
+	unsigned int j;
 
 	if (size == 0)
 	{
@@ -23,8 +24,6 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	int j;
-
 	for (j = 0; j < size; j++)
 	{
 		ptr[j] = c;
