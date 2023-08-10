@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
 /**
@@ -22,11 +23,11 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	unsigned int i;
+	unsigned int j;
 
-	for (i = 0; i < size; i++)
+	for (j = 0; j < size; j++)
 	{
-		ptr[i] = c;
+		ptr[j] = c;
 	}
 	ptr[i] = '\0';
 	return (ptr);
