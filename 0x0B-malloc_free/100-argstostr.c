@@ -25,12 +25,13 @@ char *argstostr(int ac, char **av)
 			len++;
 			j++;
 		}
+		len++;
 	}
 	ptr = malloc(sizeof(char) * len + 1);
 	if (ptr == NULL)
 		return (NULL);
 	pos = 0;
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		j = 0;
 		while (av[i][j] != '\0')
