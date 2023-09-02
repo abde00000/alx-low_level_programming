@@ -15,5 +15,6 @@ int _sqrt_helper(int n, int test);
 int is_prime_number(int n);
 int _prime_helper(int n, int divisor);
 int is_palindrome(char *s);
+int _rec_pal(char *s, int start, int end);
 int wildcmp(char *s1, char *s2);
 #endif/*MAIN_H*/
