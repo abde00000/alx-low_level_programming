@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	if (cents < 0)
 	{
 		printf("0\n");
+		return (1);
 	}
 	while (cents >= 25)
 	{
