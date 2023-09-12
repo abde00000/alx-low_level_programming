@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * malloc_checked - Write a function that allocates memory using malloc.
  * @b: the memory to be allocated
