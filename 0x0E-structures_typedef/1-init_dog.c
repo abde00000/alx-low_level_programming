@@ -14,6 +14,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	int name_len = 0;
 	int owner_len = 0;
 
+	if (d == NULL)
+		d = malloc(sizeof(struct dog));
 	while (name[i] != '\0')
 	{
 		name_len++;
