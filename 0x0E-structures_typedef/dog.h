@@ -9,14 +9,14 @@
  *
  * Description: Longer description
  */
-#include <stdio.h>
-#include <stdlib.h>
+
 struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 };
+
 /**
  * dog_t - new defined type for struct dog
  */
