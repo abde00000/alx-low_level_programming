@@ -5,7 +5,9 @@
  * struct dog - infos about a dog
  * @name: name of the dog
  * @age: age of the dog
- * @owner: owner of the dog
+ * @owner: owner of the do
+ *
+ * Description: Longer description
  */
 #include <stdio.h>
 #include <stdlib.h>
