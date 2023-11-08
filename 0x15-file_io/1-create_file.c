@@ -1,24 +1,29 @@
 #include "main.h"
 /**
+ * _strlens - counts string lengths
+ * @text: the string
+ * Return: string length;
+ */
+size_t _strlens(const char *text)
+{
+	size_t i = 0;
+
+	if (text == NULL)
+		return (0);
+	while (text[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+/**
  * create_file - creates a file.
  * @filename: is the name of the file to create
  * @text_content: a NULL terminated string to write to the file
  *
  * Return: 1 on success, -1 on failure (file can not be created,
- *		file can not be written, write “fails”, etc…)
+ *              file can not be written, write “fails”, etc…)
  */
-size_t _strlens(const char *text)
-{
-        size_t i = 0;
-
-        if (text == NULL)
-                return 0;
-        while (text[i] != '\0')
-        {
-                i++;
-        }
-        return (i);
-}
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
