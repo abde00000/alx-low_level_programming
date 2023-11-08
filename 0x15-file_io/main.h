@@ -12,5 +12,16 @@ int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
+size_t _strlen(char *text)
+{
+	if (text == NULL)
+		return (0);
+	size_t i = 0;
 
+	while (text[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 #endif /*MAIN_H*/
