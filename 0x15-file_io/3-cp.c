@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	if (to == -1)
 	{
 		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s", argv[2]);
+			"Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	B_read = read(from, buffer, 1024);
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 		if (B_write != B_read)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s", argv[2]);
+				"Error: Can't write to %s\n", argv[2]);
 		exit(99);
 		}
 	B_read = read(from, buffer, 1024);
