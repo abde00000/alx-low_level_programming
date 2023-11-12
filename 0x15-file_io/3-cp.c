@@ -53,12 +53,6 @@ int main(int argc, char *argv[])
 	}
 	buffer = create_buff(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	if (from == -1)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (to == -1)
 	{
@@ -67,7 +61,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	B_read = read(from, buffer, 1024);
-	if (B_read == -1)
+	if (B_read == -1 || from == -1)
 	{
 		dprintf(STDERR_FILENO,
 			"Error: Can't read from file %s\n", argv[1]);
@@ -87,6 +81,5 @@ int main(int argc, char *argv[])
 	free(buffer);
 	closeF(from);
 	closeF(to);
-
 	return (0);
 }
