@@ -7,6 +7,8 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+char *create_buff(char *file);
+void closeF(int fd);
 size_t _strlens(const char *text);
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
