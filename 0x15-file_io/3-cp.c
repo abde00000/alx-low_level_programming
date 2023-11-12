@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * closeF - closed the file descriptors
  * @fd: the file descriptor
@@ -41,36 +43,40 @@ char *create_buff(char *file)
  */
 int main(int argc, char *argv[])
 {
-	int from, to, read, write;
+	int from, to, B_read, B_write;
 	char *buffer;
 
-	if (argv != 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	buffer = create_buff(argv[2]);
-	from = open(argv[1], O_RONLY);
-	read = read(from, buffer, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-	while (read > 0)
+	from = open(argv[1], O_RDONLY);
+	if (from == -1)
 	{
-		if (from == -1 || read == -1)
+		dprintf(STDERR_FILENO,
+                                "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (to == -1)
+	{
+		dprintf(STDERR_FILENO,
+                                "Error: Can't write to %s", argv[2]);
+                        exit(99);
+	}
+	B_read = read(from, buffer, 1024);
+	while (B_read > 0)
+	{
+	B_write = write(to, buffer, B_read);
+		if (B_write != B_read)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
-			exit(98);
+                                "Error: Can't write to %s", argv[2]);
+                        exit(99);
 		}
-	write = write(to, buffer, r);
-		if (to == -1 || write == -1)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s", argv[2]);
-			exit(99);
-		}
-	read = read(from, buffer, 1024);
-	to = open(to, O_WRONLY | O_APPEND);
+	B_read = read(from, buffer, 1024);
 	}
 	free(buffer);
 	closeF(from);

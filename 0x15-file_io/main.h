@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 char *create_buff(char *file);
 void closeF(int fd);
 size_t _strlens(const char *text);
