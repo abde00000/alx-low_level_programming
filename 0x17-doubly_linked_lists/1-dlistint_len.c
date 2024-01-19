@@ -6,7 +6,7 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	dlistint_t *temp = h;
+	const dlistint_t *temp = h;
 	size_t elements = 0;
 
 	if (temp == NULL)
