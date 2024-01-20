@@ -1,13 +1,17 @@
 #include <stdio.h>
+#include <stdarg.h>
 #include <stdlib.h>
 #include "lists.h"
 
 
 /**
- * main - check the code for Holberton School students.
+ * _create_dlist - Create a list
  *
- * Return: Always 0.
+ * @n: Number of elements
+ *
+ * Return: A pointer to the first element of the created list
  */
+
 int main(void)
 {
 	dlistint_t *head;
@@ -22,5 +26,6 @@ int main(void)
 		printf("(nil)\n");
 	n = print_dlistint(head);
 	printf("-> %lu elements\n", n);
+	
 	return (0);
 }
