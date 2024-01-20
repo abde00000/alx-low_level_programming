@@ -2,8 +2,9 @@
 /**
  * insert_dnodeint_at_index -  inserts a new node at a given position.
  * @h: the head of the linked list
- * @idk: the index
+ * @idx: the index
  * @n: the data
+ * Return: the new node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -45,5 +46,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			Nnext->prev = new;
 		return (new);
 	}
-	return new;
-}	
+	return (new);
+}
