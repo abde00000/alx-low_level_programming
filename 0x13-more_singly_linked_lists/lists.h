@@ -30,4 +30,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *add_at_0(listint_t **head, int n);
 listint_t *add_at_end(listint_t **head, int n);
 listint_t *add_at_idx(listint_t **head, unsigned int idx, int n);
+listint_t *reverse_listint(listint_t **head);
 #endif /* LISTS_H */
