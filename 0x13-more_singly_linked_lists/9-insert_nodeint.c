@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * add_at_0-insert a node at the beginning of the linked list
+ * add_at_0 - insert a node at the beginning of the linked list
  * @head: the head of the node
  * @n: the data
- * Return : new node
+ * Return: new node
  */
 listint_t *add_at_0(listint_t **head, int n)
 {
@@ -20,10 +20,10 @@ listint_t *add_at_0(listint_t **head, int n)
 	return (new);
 }
 /**
- * add_at_end-insert a node at the end of the linked list
+ * add_at_end - insert a node at the end of the linked list
  * @head: the head of the node
  * @n: the data
- * Return : new node
+ * Return: new node
  */
 listint_t *add_at_end(listint_t **head, int n)
 {
